@@ -1,0 +1,168 @@
+body {
+    background: #efefef;
+    overflow-y: hidden;
+}
+
+.altura {
+    height: 100vh;
+}
+
+.bg-negro {
+    background: #428bff;
+}
+
+.w-43 {
+    width: 43%;
+}
+
+.w-90 {
+    width: 85%;
+}
+
+.img-logo {
+    display: none;
+}
+
+.lo {
+    /*centrar*/
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*quitar los b0rdes de los input*/
+.form-control:focus {
+    color: black;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 0.1rem #428bff !important;
+}
+
+.fs-small {
+    font-size: small;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* poner icono a input password*/
+.contrasena {
+    padding-right: 30px;
+}
+
+.contrasena+.glyphicon {
+    right: 10px;
+    top: 53%;
+    color: #428bff;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contrasena+.glyphicon:hover {
+    color: #428bff;
+}
+
+.redondear {
+    border-radius: 15px;
+}
+
+.noti-success {
+    filter: drop-shadow(0 2px 5px rgba(34, 176, 96, 0.7));
+    width: 60%;
+}
+
+.noti-danger {
+    filter: drop-shadow(0 2px 5px rgba(255, 0, 0, 0.7));
+    width: 60%;
+}
+
+.border-info {
+    border: 1px solid transparent !important;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.flotar {
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.7));
+}
+
+@media (min-width: 1281px) and (max-width: 1366px) {}
+
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .con-img {
+        display: none;
+    }
+
+    .w-90 {
+        width: 50%;
+    }
+
+    .lo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .con-img {
+        display: none;
+    }
+
+    .w-90 {
+        width: 75%;
+    }
+
+    .lo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .altura {
+        height: 100%;
+    }
+
+    .w-90 {
+        width: 95%;
+    }
+
+    .lo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .con-img {
+        display: none;
+    }
+
+    .img-logo {
+        display: block;
+    }
+}
