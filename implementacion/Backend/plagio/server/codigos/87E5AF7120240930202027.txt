@@ -1,0 +1,13 @@
+/*
+Online Java - IDE, Code Editor, Compiler
+
+Online Java is a quick and easy tool that helps you to build, compile, test your programs online.
+*/
+
+public class Main {
+public static void main(String[] args) {
+int a = 10;
+int b = 25;
+int resultado = sumar(a, b);
+System.out.println(&quot;La suma es: &quot; + resultado);
+}

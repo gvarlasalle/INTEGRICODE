@@ -1,0 +1,50 @@
+// Codificado por: Beastieux
+// Listar los números primos según el número de dígitos indicado
+ 
+public class SyGNumerosPrimos {
+public static void main(String arg[]) {
+if (arg.length < 1) {
+System.out.println("Debe ingresar un número de dígitos como parámetro.");
+return;
+}
+ 
+int numDigitos = Integer.parseInt(arg[0]);
+         
+if (numDigitos <= 0) {
+System.out.println("Ingrese un número de dígitos válido (mayor que 0).");
+return;
+}
+
+for (int i = (int) Math.pow(10, numDigitos - 1); i < Math.pow(10, numDigitos); i++) {
+if (esPrimo(i)) {
+System.out.println(i);
+}
+}
+}
+ 
+public static boolean esPrimo(int num) {
+if (num <= 1) {
+return false;
+}
+ 
+if (num <= 3) {
+return true;
+}
+ 
+if (num % 2 == 0 || num % 3 == 0) {
+return false;
+}
+ 
+int i = 5;
+ 
+while (i * i <= num) {
+if (num % i == 0 || num % (i + 2) == 0) {
+return false;
+}
+ 
+i += 6;
+}
+ 
+return true;
+}
+}

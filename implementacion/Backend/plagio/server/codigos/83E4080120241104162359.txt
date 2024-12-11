@@ -1,0 +1,11 @@
+public class Main {
+public class Main {
+public static void main(String[] args) {
+int resultado = sumar(5, 3);
+System.out.println(&quot;La suma es: &quot; + resultado);
+}
+
+public static int sumar(int num1, int num2) {
+return num1 + num2;
+}
+}
