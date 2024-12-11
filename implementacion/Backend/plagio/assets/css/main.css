@@ -1,0 +1,244 @@
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-items: center;
+}
+
+.bg-fondo {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.redondear {
+    border-radius: 15px;
+}
+
+.altura {
+    height: 100px;
+}
+
+.altura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.bg-blanco {
+    background: #ffffff;
+}
+
+.bg-azul {
+    background: var(--color-hover);
+}
+
+.text-azul{
+    color: var(--color-hover);
+}
+
+.circulo {
+    border-radius: 50%;
+}
+
+.tarjeta {
+    background: #ffffff;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.btn-add {
+    position: fixed;
+    bottom: 1rem;
+    width: 55px;
+    height: 55px;
+    z-index: 100;
+    background: var(--color-hover);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 1rem;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.carpeta {
+    width: 45px;
+}
+
+.foto-docente img {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.linea-lateral {
+    width: 3px;
+    height: calc(100% - 80px);
+    background: var(--color-hover);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.show {
+    width: 100%;
+}
+
+/* foto perfil */
+.file-select {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/images/camara.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.file-select::before {
+    background-color: #EBE7FF;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: 'Seleccionar';
+    height: 2px;
+    width: 2px;
+    /* testo por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.file-select input[type="file"] {
+    background: #5678EF;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.archivo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: relative;
+    background: rgba(34, 176, 96, 0.2);
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.40);
+}
+
+.archivo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.w-3\/4{
+    width: 75%;
+    text-align: start;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#src-file1::before {
+    content: '';
+}
+
+/* fin foto perfil */
+
+#floatingTextarea2, #descripcionAct{
+    min-height: 40px;      /* Altura mínima */
+    overflow: hidden;      /* Evita el scrollbar */
+    resize: none;
+}
+
+.banner-curso{
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.h-85{
+    height: 85%;
+}
+
+.arial{
+    font-family: 'Arial';
+}
+
+@media (min-width: 1025px) {
+    .cursos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cursos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .cursos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .banner-curso{
+        height: 160px;
+    }
+
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .cursos {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 18px;
+        margin-bottom: 40px;
+    }
+    .banner-curso{
+        height: 150px;
+    }
+    .archivo {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+        background: rgba(34, 176, 96, 0.2);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.40);
+    }
+    
+    .archivo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .w-3\/4{
+        width: 100%;
+        text-align: center;
+        font-size: small;
+    }
+    .text-boton{
+        display: none;
+    }
+    .pe-5{
+        padding-right: 0px !important;
+    }
+}
